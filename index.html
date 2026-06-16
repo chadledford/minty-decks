@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Minty for Business — Decks</title>
+<style>
+  :root{--page:#101B14;--card:#18261E;--mint:#62F0B0;--ink:#F4F7FA;--sub:#9FB1A8;--line:rgba(98,240,176,.18)}
+  *{box-sizing:border-box}
+  body{margin:0;min-height:100vh;background:radial-gradient(900px 500px at 80% -10%,rgba(98,240,176,.12),transparent 60%),var(--page);
+       color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Arial,sans-serif;
+       display:flex;align-items:center;justify-content:center;padding:48px 24px}
+  .wrap{width:100%;max-width:760px}
+  .eyebrow{color:var(--mint);font-weight:700;letter-spacing:.16em;text-transform:uppercase;font-size:13px;margin:0 0 14px}
+  h1{font-size:clamp(30px,5vw,46px);line-height:1.05;letter-spacing:-.02em;margin:0 0 10px}
+  .lead{color:var(--sub);font-size:17px;line-height:1.5;margin:0 0 34px;max-width:54ch}
+  .cards{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  a.card{display:block;text-decoration:none;color:var(--ink);background:var(--card);border:1px solid var(--line);
+         border-radius:18px;padding:26px;transition:transform .15s ease,border-color .15s ease}
+  a.card:hover{transform:translateY(-3px);border-color:var(--mint)}
+  .tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#0C1A12;background:var(--mint);border-radius:6px;padding:3px 10px;margin-bottom:14px}
+  a.card h2{font-size:21px;margin:0 0 8px;letter-spacing:-.01em}
+  a.card p{color:var(--sub);font-size:14px;line-height:1.45;margin:0}
+  .go{margin-top:16px;color:var(--mint);font-weight:700;font-size:14px}
+  footer{margin-top:30px;color:var(--sub);font-size:12px;letter-spacing:.04em}
+  @media (max-width:640px){.cards{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <p class="eyebrow">Minty for Business</p>
+    <h1>Proactive Commerce — sales decks</h1>
+    <p class="lead">Open a deck below. Each is a self-contained presentation — use arrow keys or scroll, and print to PDF from your browser.</p>
+    <div class="cards">
+      <a class="card" href="./Minty-Proactive-Commerce-Deck.html">
+        <span class="tag">Master</span>
+        <h2>Minty for Business</h2>
+        <p>The standard Proactive Commerce pitch — ready to personalize per prospect.</p>
+        <div class="go">Open deck →</div>
+      </a>
+      <a class="card" href="./Minty-for-Macys-Deck.html">
+        <span class="tag">Example</span>
+        <h2>Minty for Macy's</h2>
+        <p>A personalized version showing how the deck tailors to a specific brand.</p>
+        <div class="go">Open deck →</div>
+      </a>
+    </div>
+    <footer>Minty Confidential &amp; Proprietary</footer>
+  </div>
+</body>
+</html>
