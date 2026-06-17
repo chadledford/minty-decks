@@ -1010,6 +1010,10 @@ table.minty-table--striped tbody tr:nth-child(even) td {
   .photo{position:relative;border-radius:18px;min-height:300px;display:flex;align-items:center;justify-content:center;text-align:center;padding:24px;background:linear-gradient(135deg,#D7FBE6,#9CF6C8 58%,#62F0B0);border:1.5px dashed rgba(0,98,63,.5);overflow:hidden}
   .scene{position:relative;border-radius:18px;min-height:300px;height:100%;overflow:hidden;box-shadow:0 10px 30px rgba(9,63,44,.18);display:flex}
   .scene svg{display:block}
+  .increment-rail{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-top:16px;background:var(--forest);border-radius:14px;padding:16px 20px}
+  .increment-rail>div{color:#D9EFE6;font-size:13px;line-height:1.4;border-left:2px solid rgba(98,240,176,.45);padding-left:14px}
+  .increment-rail>div:first-child{border-left:none;padding-left:0}
+  .increment-rail .ir-k{display:block;color:var(--mint);font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:10.5px;margin-bottom:5px}
   .photo .lbl{color:var(--way);font-weight:700;letter-spacing:.06em;text-transform:uppercase;font-size:13px}
   .photo .lbl small{display:block;text-transform:none;letter-spacing:0;font-weight:500;color:#2C3A33;margin-top:8px;font-size:13.5px}
   .photo .frame{position:absolute;inset:12px;border:1px solid rgba(0,98,63,.18);border-radius:12px;pointer-events:none}
@@ -1387,37 +1391,6 @@ table.minty-table--striped tbody tr:nth-child(even) td {
     <span class="slide__num">08</span>
   </section>
 
-  <!-- 08c INCREMENTALITY -->
-  <section class="slide" id="s8c">
-    <div class="slide__inner">
-      <p class="eyebrow">Incremental by design</p>
-      <h2 class="section-title">Net-new revenue — not credit for sales you'd already win.</h2>
-      <p class="lead" style="margin-top:14px;max-width:64ch;">Minty reaches the shoppers you were never going to convert on your own: the anonymous, the abandoned, the lapsed. And because you only pay when one of them buys, you never pay for a sale you'd have made anyway.</p>
-      <div class="grid grid-3" style="margin-top:24px;align-items:stretch;">
-        <div class="card">
-          <p class="eyebrow">Who we reach</p>
-          <h3 style="margin:6px 0 8px;">The shoppers you can't see</h3>
-          <p>Anonymous visitors, cart abandoners, and lapsed customers your pixel and ESP can't re-identify — surfaced through the network graph.</p>
-        </div>
-        <div class="card">
-          <p class="eyebrow">How it's proven</p>
-          <h3 style="margin:6px 0 8px;">Lift is measured, not assumed</h3>
-          <p>Control-group holdout testing isolates true incremental sales, so you see the revenue that only happened because of Minty.</p>
-        </div>
-        <div class="card">
-          <p class="eyebrow">How you pay</p>
-          <h3 style="margin:6px 0 8px;">Only for sales we drive</h3>
-          <p>Performance pricing on Minty-attributed conversions. A click is never billed unless it turns into a purchase — incrementality is built into the model.</p>
-        </div>
-      </div>
-      <div class="surface surface--forest" style="margin-top:20px;display:flex;align-items:center;gap:22px;padding:20px 26px;">
-        <div class="bignum" style="font-size:clamp(34px,4.4cqw,52px);line-height:1;color:#fff;">10%</div>
-        <div style="color:#D9EFE6;font-size:15px;line-height:1.45;">of <strong style="color:#fff;">all new customers</strong> in a year came from Minty — net-new buyers a beauty leader's own channels never reached. <span style="color:#9FD9BE;">(The Avon Company)</span></div>
-      </div>
-    </div>
-    <span class="slide__num">09</span>
-  </section>
-
   <!-- SECURITY & SPEED -->
   <section class="slide" id="s8b">
     <div class="slide__inner">
@@ -1438,15 +1411,20 @@ table.minty-table--striped tbody tr:nth-child(even) td {
         </div>
       </div>
     </div>
-    <span class="slide__num">10</span>
+    <span class="slide__num">09</span>
   </section>
 
   <!-- 09 PROOF -->
   <section class="slide" id="s9">
     <div class="slide__inner">
-      <p class="eyebrow">Proof it works</p>
-      <h2 class="section-title">1,500+ brands trust Minty to drive revenue.</h2>
-      <div class="two-col" style="margin-top:22px;align-items:stretch;">
+      <p class="eyebrow">Incremental — and proven</p>
+      <h2 class="section-title">Net-new revenue, proven across 1,500+ brands.</h2>
+      <div class="increment-rail">
+        <div><span class="ir-k">Who we reach</span>Anonymous, abandoned &amp; lapsed shoppers your stack can't see</div>
+        <div><span class="ir-k">How it's proven</span>Control-group holdout testing isolates true lift</div>
+        <div><span class="ir-k">You only pay</span>For Minty-attributed sales — never for one you'd have made</div>
+      </div>
+      <div class="two-col" style="margin-top:16px;align-items:stretch;">
         <div class="casecard">
           <p class="eyebrow">Case study · Avon · Beauty</p>
           <h3 style="margin-bottom:6px;">Modernizing a beauty icon with Minty</h3>
@@ -1472,7 +1450,7 @@ table.minty-table--striped tbody tr:nth-child(even) td {
         </div>
       </div>
     </div>
-    <span class="slide__num">11</span>
+    <span class="slide__num">10</span>
   </section>
 
   <!-- 10 CTA -->
@@ -1491,7 +1469,7 @@ table.minty-table--striped tbody tr:nth-child(even) td {
         <p style="margin-top:18px;color:#21302A;">Your contact: <span class="ph">[AE NAME · email · phone]</span></p>
       </div>
     </div>
-    <span class="slide__num">12</span>
+    <span class="slide__num">11</span>
   </section>
 
 </main>
