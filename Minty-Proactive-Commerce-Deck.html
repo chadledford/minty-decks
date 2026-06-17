@@ -1010,10 +1010,22 @@ table.minty-table--striped tbody tr:nth-child(even) td {
   .photo{position:relative;border-radius:18px;min-height:300px;display:flex;align-items:center;justify-content:center;text-align:center;padding:24px;background:linear-gradient(135deg,#D7FBE6,#9CF6C8 58%,#62F0B0);border:1.5px dashed rgba(0,98,63,.5);overflow:hidden}
   .scene{position:relative;border-radius:18px;min-height:300px;height:100%;overflow:hidden;box-shadow:0 10px 30px rgba(9,63,44,.18);display:flex}
   .scene svg{display:block}
-  .increment-rail{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-top:16px;background:var(--forest);border-radius:14px;padding:16px 20px}
-  .increment-rail>div{color:#D9EFE6;font-size:13px;line-height:1.4;border-left:2px solid rgba(98,240,176,.45);padding-left:14px}
-  .increment-rail>div:first-child{border-left:none;padding-left:0}
-  .increment-rail .ir-k{display:block;color:var(--mint);font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:10.5px;margin-bottom:5px}
+  .proof-grid{display:grid;grid-template-columns:0.9fr 1.1fr;gap:20px;margin-top:18px;align-items:stretch}
+  .incr-panel{display:flex;flex-direction:column;justify-content:space-between;gap:20px;padding:26px 26px 24px}
+  .incr-panel h3{color:#fff;font-size:25px;line-height:1.08;margin:8px 0 0;letter-spacing:-.01em}
+  .incr-panel .incr-sub{color:#D9EFE6;font-size:13.5px;line-height:1.45;margin:10px 0 0}
+  .incr-list{display:flex;flex-direction:column;gap:13px}
+  .incr-list>div{color:#EAF7F0;font-size:13.5px;line-height:1.38;border-left:2px solid rgba(98,240,176,.5);padding-left:13px}
+  .incr-list .ir-k{display:block;color:var(--mint);font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:10.5px;margin-bottom:4px}
+  .proof-right{display:flex;flex-direction:column;gap:12px}
+  #s9 .card{padding:18px}
+  #s9 .win{padding:6px 0}
+  #s9 .wins{gap:6px}
+  #s9 .casecard{padding:22px}
+  #s9 .casecard .kpis{margin:6px 0 12px}
+  #s9 .logo-wall{gap:9px;margin-top:10px}
+  #s9 .logo-chip{padding:8px 8px;gap:5px}
+  #s9 .logo-chip .fav{width:24px;height:24px}
   .photo .lbl{color:var(--way);font-weight:700;letter-spacing:.06em;text-transform:uppercase;font-size:13px}
   .photo .lbl small{display:block;text-transform:none;letter-spacing:0;font-weight:500;color:#2C3A33;margin-top:8px;font-size:13.5px}
   .photo .frame{position:absolute;inset:12px;border:1px solid rgba(0,98,63,.18);border-radius:12px;pointer-events:none}
@@ -1083,9 +1095,9 @@ table.minty-table--striped tbody tr:nth-child(even) td {
   .step__n{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:50%;background:var(--mint);color:#0C1A12;font-weight:700;margin-bottom:12px}
   .step h3{color:var(--ink)}
   .step p{color:#21302A;margin:7px 0 0}
-  .logo-wall{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:18px}
-  .logo-chip{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7px;padding:14px 8px;background:var(--card);border:1px solid var(--line);border-radius:12px;color:#6A7A72;font-weight:500;letter-spacing:.01em;font-size:12px}
-  .logo-chip .fav{width:30px;height:30px;border-radius:7px;flex:0 0 auto}
+  .logo-wall{display:grid;grid-template-columns:repeat(5,1fr);gap:9px;margin-top:12px}
+  .logo-chip{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;padding:8px 8px;background:var(--card);border:1px solid var(--line);border-radius:12px;color:#6A7A72;font-weight:500;letter-spacing:.01em;font-size:12px}
+  .logo-chip .fav{width:24px;height:24px;border-radius:6px;flex:0 0 auto}
   .prod-mark{height:40px;width:auto;display:block;margin:0 0 14px}
   .phone{width:280px;max-width:100%;background:var(--bezel);border-radius:34px;padding:12px;box-shadow:0 18px 40px rgba(16,27,20,.22);position:relative}
   .phone::before{content:"";position:absolute;top:18px;left:50%;transform:translateX(-50%);width:90px;height:7px;border-radius:7px;background:#2a3a32}
@@ -1118,8 +1130,8 @@ table.minty-table--striped tbody tr:nth-child(even) td {
   .dash .m .k{font-size:11px;color:var(--ink-subtle)}
   .dash .m .v{font-size:clamp(18px,2cqw,26px);font-weight:700;color:var(--ink);letter-spacing:-.02em}
   .dash .m .d{font-size:11px;color:var(--way);font-weight:600}
-  .casecard{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:30px;box-shadow:0 2px 10px rgba(16,27,20,.06)}
-  .casecard .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:6px 0 18px}
+  .casecard{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px;box-shadow:0 2px 10px rgba(16,27,20,.06)}
+  .casecard .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:6px 0 14px}
   .casecard .kpis .v{font-size:clamp(22px,2.4cqw,32px);font-weight:700;color:var(--way);letter-spacing:-.02em}
   .casecard .kpis .l{font-size:12px;color:var(--ink-subtle)}
   .quote{font-style:italic;color:var(--ink-body);line-height:1.5;border-left:3px solid var(--mint);padding-left:16px}
@@ -1137,7 +1149,7 @@ table.minty-table--striped tbody tr:nth-child(even) td {
   .macys-logo .mstar{width:.72em;height:.72em;fill:#E01A2B;margin:0 .04em;display:inline-block}
   .surface--tide .ph{color:var(--dark-grey-green-1000);border-bottom-color:rgba(16,27,20,.4)}
   .surface--forest .ph,.hero .ph{color:var(--mint);border-bottom-color:rgba(98,240,176,.5)}
-  .btn{display:inline-block;padding:17px 40px;border-radius:999px;background:#fff;color:var(--way);font-weight:700;text-decoration:none;font-size:18px;letter-spacing:.01em;box-shadow:0 10px 24px rgba(8,13,10,.2)}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-width:220px;padding:16px 40px;border-radius:999px;background:#fff;color:var(--way);font-weight:700;text-decoration:none;font-size:18px;line-height:1;letter-spacing:.01em;text-align:center;box-shadow:0 10px 24px rgba(8,13,10,.2)}
   .creds{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
   .cred{background:#E2F4EC;border:1px solid rgba(0,98,63,.2);border-radius:9px;padding:7px 13px;font-weight:700;font-size:12.5px;color:#1F4A38;letter-spacing:.02em}
   .pricetag{display:inline-block;background:#E2F4EC;border:1px solid rgba(0,98,63,.25);color:var(--way);font-weight:700;font-size:12px;letter-spacing:.04em;text-transform:uppercase;padding:5px 13px;border-radius:999px;margin-bottom:12px}
@@ -1419,12 +1431,20 @@ table.minty-table--striped tbody tr:nth-child(even) td {
     <div class="slide__inner">
       <p class="eyebrow">Incremental — and proven</p>
       <h2 class="section-title">Net-new revenue, proven across 1,500+ brands.</h2>
-      <div class="increment-rail">
-        <div><span class="ir-k">Who we reach</span>Anonymous, abandoned &amp; lapsed shoppers your stack can't see</div>
-        <div><span class="ir-k">How it's proven</span>Control-group holdout testing isolates true lift</div>
-        <div><span class="ir-k">You only pay</span>For Minty-attributed sales — never for one you'd have made</div>
-      </div>
-      <div class="two-col" style="margin-top:16px;align-items:stretch;">
+      <div class="proof-grid">
+        <div class="surface surface--forest incr-panel">
+          <div>
+            <p class="eyebrow">Incremental by design</p>
+            <h3>Every dollar is net-new.</h3>
+            <p class="incr-sub">Minty reaches shoppers you weren't going to convert on your own — and you only pay when one of them buys.</p>
+          </div>
+          <div class="incr-list">
+            <div><span class="ir-k">Who we reach</span>Anonymous, abandoned &amp; lapsed shoppers your stack can't see</div>
+            <div><span class="ir-k">How it's proven</span>Control-group holdout and A/B testing isolate true lift</div>
+            <div><span class="ir-k">You only pay</span>For Minty-attributed sales — never for one you'd have made</div>
+          </div>
+        </div>
+        <div class="proof-right">
         <div class="casecard">
           <p class="eyebrow">Case study · Stanley 1913</p>
           <h3 style="margin-bottom:6px;">Converting influencer traffic into revenue</h3>
@@ -1432,9 +1452,9 @@ table.minty-table--striped tbody tr:nth-child(even) td {
           <p class="quote">“Minty offers solutions such as site-abandonment tools to capture traffic and another chance to convert sales. We've seen tremendous results and growth — they're one of our top revenue-driving sources.”</p>
           <div class="byline"><b>Nick Joy</b> · E-Commerce Marketing Manager, Stanley 1913</div>
         </div>
-        <div style="display:flex;flex-direction:column;gap:16px;">
+        <div style="display:flex;flex-direction:column;gap:12px;">
           <div class="card">
-            <p class="eyebrow" style="margin-bottom:10px;">More Minty-driven revenue</p>
+            <p class="eyebrow" style="margin-bottom:8px;">More Minty-driven revenue</p>
             <div class="wins">
               <div class="win"><div><b>Natchez</b><span>33.2% conv · 70.8% open · 12.3% CTR</span></div><div class="winrev">$4.6M</div></div>
               <div class="win"><div><b>SpotOn Fence</b><span>22.4% conv · 44.5% open · 6.9% CTR</span></div><div class="winrev">$3.4M</div></div>
@@ -1447,6 +1467,7 @@ table.minty-table--striped tbody tr:nth-child(even) td {
               <span class="logo-chip"><img class="fav" src="https://www.google.com/s2/favicons?domain=groupon.com&sz=64" alt="">Groupon</span><span class="logo-chip"><img class="fav" src="https://www.google.com/s2/favicons?domain=teleflora.com&sz=64" alt="">Teleflora</span><span class="logo-chip"><img class="fav" src="https://www.google.com/s2/favicons?domain=natchezss.com&sz=64" alt="">Natchez</span><span class="logo-chip"><img class="fav" src="https://www.google.com/s2/favicons?domain=spoton.pet&sz=64" alt="">SpotOn</span><span class="logo-chip"><img class="fav" src="https://www.google.com/s2/favicons?domain=cupshe.com&sz=64" alt="">Cupshe</span>
             </div>
           </div>
+        </div>
         </div>
       </div>
     </div>
