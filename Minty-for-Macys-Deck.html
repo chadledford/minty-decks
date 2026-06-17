@@ -971,7 +971,7 @@ table.minty-table--striped tbody tr:nth-child(even) td {
   .progress-fill{height:100%;width:0;background:var(--mint);transition:width .25s ease}
   .navhint{position:fixed;bottom:18px;left:24px;z-index:50;font-size:12px;color:var(--ink-subtle);letter-spacing:.04em}
   .deck{padding-top:60px}
-  .slide{height:calc(100vh - 60px);display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative}
+  .slide{height:var(--slideH,calc(100vh - 60px));min-height:150px;display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative}
   .slide__inner{width:1280px;height:720px;flex:0 0 auto;container-type:inline-size;overflow:hidden;display:flex;flex-direction:column;justify-content:center;padding:44px;margin:0;transform:scale(var(--s,1));transform-origin:center center}
   .eyebrow{font-size:clamp(12px,1.1cqw,14px);font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--way);margin:0 0 18px}
   h1,h2,h3{color:var(--ink);margin:0}
@@ -1130,7 +1130,7 @@ table.minty-table--striped tbody tr:nth-child(even) td {
   .surface--tide .ph{color:var(--dark-grey-green-1000);border-bottom-color:rgba(16,27,20,.4)}
   .surface--forest .ph,.hero .ph{color:var(--mint);border-bottom-color:rgba(98,240,176,.5)}
   .btn{display:inline-block;padding:16px 30px;border-radius:999px;background:var(--mint);color:#0C1A12;font-weight:700;text-decoration:none;font-size:17px;letter-spacing:.01em}
-  @media (max-width:880px){.hero__layout,.two-col,.compare,.grid-2,.grid-3,.stats,.steps,.dash{grid-template-columns:1fr}.hero__mascot{display:none}.logo-wall{grid-template-columns:repeat(3,1fr)}.casecard .kpis{grid-template-columns:repeat(2,1fr)}}
+  
   @media print{.topbar,.progress-track,.navhint{display:none}.deck{padding-top:0}.slide{min-height:auto;height:100vh;page-break-after:always;border:none}@page{size:1280px 720px;margin:0}body{background:var(--page);-webkit-print-color-adjust:exact;print-color-adjust:exact}}
 </style>
 </head>
@@ -1408,7 +1408,7 @@ table.minty-table--striped tbody tr:nth-child(even) td {
   function go(d){const i=current();const n=Math.min(total-1,Math.max(0,i+d));slides[n].scrollIntoView({behavior:'smooth'});}
   window.addEventListener('scroll',update,{passive:true});window.addEventListener('resize',update);
   document.addEventListener('keydown',e=>{if(e.key==='ArrowRight'||e.key==='PageDown'||e.key===' '){e.preventDefault();go(1);}if(e.key==='ArrowLeft'||e.key==='PageUp'){e.preventDefault();go(-1);}});
-  function fit(){var s=Math.min((window.innerWidth-24)/1280,(window.innerHeight-84)/720);document.documentElement.style.setProperty('--s',s);}
+  function fit(){var s=Math.min((window.innerWidth-24)/1280,(window.innerHeight-84)/720);document.documentElement.style.setProperty('--s',s);document.documentElement.style.setProperty('--slideH',(720*s+48)+'px');}
   window.addEventListener('resize',fit);fit();
   update();
 </script>
