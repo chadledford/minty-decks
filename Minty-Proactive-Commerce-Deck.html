@@ -1008,6 +1008,8 @@ table.minty-table--striped tbody tr:nth-child(even) td {
   .surface--forest .eyebrow{color:var(--mint)}
 
   .photo{position:relative;border-radius:18px;min-height:300px;display:flex;align-items:center;justify-content:center;text-align:center;padding:24px;background:linear-gradient(135deg,#D7FBE6,#9CF6C8 58%,#62F0B0);border:1.5px dashed rgba(0,98,63,.5);overflow:hidden}
+  .scene{position:relative;border-radius:18px;min-height:300px;height:100%;overflow:hidden;box-shadow:0 10px 30px rgba(9,63,44,.18);display:flex}
+  .scene svg{display:block}
   .photo .lbl{color:var(--way);font-weight:700;letter-spacing:.06em;text-transform:uppercase;font-size:13px}
   .photo .lbl small{display:block;text-transform:none;letter-spacing:0;font-weight:500;color:#2C3A33;margin-top:8px;font-size:13.5px}
   .photo .frame{position:absolute;inset:12px;border:1px solid rgba(0,98,63,.18);border-radius:12px;pointer-events:none}
@@ -1173,9 +1175,50 @@ table.minty-table--striped tbody tr:nth-child(even) td {
       <h1 class="display display--md">Reactive commerce only reaches the 5% who raise their hand.</h1>
       <p class="lead" style="margin-top:16px;">For 20 years brands have waited for shoppers to show up, then paid to chase the few who handed over an email. The other 95% stay anonymous — to you — and leave with no way back.</p>
       <div class="two-col" style="margin-top:26px;align-items:stretch;">
-        <div class="photo">
-          <div class="frame"></div>
-          <div class="lbl">Lifestyle photo<small>Shopper browsing on their phone — couch / on-the-go scene</small></div>
+        <div class="scene">
+          <svg viewBox="0 0 520 360" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Anonymous shoppers browsing then drifting away">
+            <defs>
+              <linearGradient id="scBg" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#0D5A3B"/><stop offset="1" stop-color="#093F2C"/>
+              </linearGradient>
+              <radialGradient id="scGlow" cx="50%" cy="38%" r="55%">
+                <stop offset="0" stop-color="#62F0B0" stop-opacity=".30"/><stop offset="1" stop-color="#62F0B0" stop-opacity="0"/>
+              </radialGradient>
+              <linearGradient id="scScreen" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#EAFBF2"/><stop offset="1" stop-color="#C9F6DF"/>
+              </linearGradient>
+              <g id="ghost"><circle cx="0" cy="-9" r="9"/><path d="M-13 12a13 13 0 0 1 26 0z"/></g>
+            </defs>
+            <rect width="520" height="360" rx="18" fill="url(#scBg)"/>
+            <rect width="520" height="360" rx="18" fill="url(#scGlow)"/>
+            <!-- phone -->
+            <g transform="translate(210 78)">
+              <rect x="-6" y="-6" width="112" height="216" rx="22" fill="#03251A"/>
+              <rect x="0" y="0" width="100" height="204" rx="17" fill="url(#scScreen)"/>
+              <rect x="36" y="9" width="28" height="5" rx="2.5" fill="#03251A" opacity=".35"/>
+              <rect x="12" y="26" width="76" height="40" rx="8" fill="#62F0B0" opacity=".55"/>
+              <rect x="12" y="74" width="36" height="44" rx="8" fill="#0A4830" opacity=".14"/>
+              <rect x="52" y="74" width="36" height="44" rx="8" fill="#0A4830" opacity=".14"/>
+              <rect x="12" y="126" width="36" height="44" rx="8" fill="#0A4830" opacity=".14"/>
+              <rect x="52" y="126" width="36" height="44" rx="8" fill="#0A4830" opacity=".14"/>
+              <rect x="12" y="182" width="76" height="12" rx="6" fill="#00623F" opacity=".8"/>
+            </g>
+            <!-- anonymous shoppers drifting away, fading toward the edges -->
+            <g fill="#9FF0C7">
+              <use href="#ghost" transform="translate(95 120)" opacity=".85"/>
+              <use href="#ghost" transform="translate(58 196) scale(.9)" opacity=".55"/>
+              <use href="#ghost" transform="translate(110 268) scale(.8)" opacity=".32"/>
+              <use href="#ghost" transform="translate(420 132)" opacity=".85"/>
+              <use href="#ghost" transform="translate(456 210) scale(.9)" opacity=".5"/>
+              <use href="#ghost" transform="translate(404 282) scale(.8)" opacity=".3"/>
+            </g>
+            <!-- drift trails -->
+            <g stroke="#62F0B0" stroke-width="2" stroke-linecap="round" fill="none" opacity=".45" stroke-dasharray="2 8">
+              <path d="M150 130 C110 150 95 175 70 192"/>
+              <path d="M372 142 C412 162 432 188 448 206"/>
+            </g>
+            <text x="260" y="338" text-anchor="middle" fill="#9FD9BE" font-family="Poppins,sans-serif" font-size="13" font-weight="600" letter-spacing=".04em">Browsing anonymously — then gone</text>
+          </svg>
         </div>
         <div class="surface surface--forest" style="display:flex;flex-direction:column;justify-content:center;text-align:center;">
           <div class="bignum">95%</div>
@@ -1344,6 +1387,37 @@ table.minty-table--striped tbody tr:nth-child(even) td {
     <span class="slide__num">08</span>
   </section>
 
+  <!-- 08c INCREMENTALITY -->
+  <section class="slide" id="s8c">
+    <div class="slide__inner">
+      <p class="eyebrow">Incremental by design</p>
+      <h2 class="section-title">Net-new revenue — not credit for sales you'd already win.</h2>
+      <p class="lead" style="margin-top:14px;max-width:64ch;">Minty reaches the shoppers you were never going to convert on your own: the anonymous, the abandoned, the lapsed. And because you only pay when one of them buys, you never pay for a sale you'd have made anyway.</p>
+      <div class="grid grid-3" style="margin-top:24px;align-items:stretch;">
+        <div class="card">
+          <p class="eyebrow">Who we reach</p>
+          <h3 style="margin:6px 0 8px;">The shoppers you can't see</h3>
+          <p>Anonymous visitors, cart abandoners, and lapsed customers your pixel and ESP can't re-identify — surfaced through the network graph.</p>
+        </div>
+        <div class="card">
+          <p class="eyebrow">How it's proven</p>
+          <h3 style="margin:6px 0 8px;">Lift is measured, not assumed</h3>
+          <p>Control-group holdout testing isolates true incremental sales, so you see the revenue that only happened because of Minty.</p>
+        </div>
+        <div class="card">
+          <p class="eyebrow">How you pay</p>
+          <h3 style="margin:6px 0 8px;">Only for sales we drive</h3>
+          <p>Performance pricing on Minty-attributed conversions. A click is never billed unless it turns into a purchase — incrementality is built into the model.</p>
+        </div>
+      </div>
+      <div class="surface surface--forest" style="margin-top:20px;display:flex;align-items:center;gap:22px;padding:20px 26px;">
+        <div class="bignum" style="font-size:clamp(34px,4.4cqw,52px);line-height:1;color:#fff;">10%</div>
+        <div style="color:#D9EFE6;font-size:15px;line-height:1.45;">of <strong style="color:#fff;">all new customers</strong> in a year came from Minty — net-new buyers a beauty leader's own channels never reached. <span style="color:#9FD9BE;">(The Avon Company)</span></div>
+      </div>
+    </div>
+    <span class="slide__num">09</span>
+  </section>
+
   <!-- SECURITY & SPEED -->
   <section class="slide" id="s8b">
     <div class="slide__inner">
@@ -1364,7 +1438,7 @@ table.minty-table--striped tbody tr:nth-child(even) td {
         </div>
       </div>
     </div>
-    <span class="slide__num">09</span>
+    <span class="slide__num">10</span>
   </section>
 
   <!-- 09 PROOF -->
@@ -1398,7 +1472,7 @@ table.minty-table--striped tbody tr:nth-child(even) td {
         </div>
       </div>
     </div>
-    <span class="slide__num">10</span>
+    <span class="slide__num">11</span>
   </section>
 
   <!-- 10 CTA -->
@@ -1417,7 +1491,7 @@ table.minty-table--striped tbody tr:nth-child(even) td {
         <p style="margin-top:18px;color:#21302A;">Your contact: <span class="ph">[AE NAME · email · phone]</span></p>
       </div>
     </div>
-    <span class="slide__num">11</span>
+    <span class="slide__num">12</span>
   </section>
 
 </main>
